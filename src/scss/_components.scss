@@ -1,0 +1,90 @@
+// Container Collaspe :
+.container-collapse-product {
+  max-width: 582px;
+  height: auto;
+  width: 100%;
+  @media (max-width: 650px) {
+    max-width: 335px;
+  }
+  .collapse .cbar h3 {
+    font-size: $size-elem;
+    @media (max-width: 650px) {
+      font-size: $size-h3-mobil;
+    }
+  }
+}
+
+.container-collapse-apropos {
+  max-width: 1023px;
+  width: 100%;
+  @media (max-width: 650px) {
+    max-width: 335px;
+  }
+  .collapse .cbar h3 {
+    font-size: $size;
+    @media (max-width: 650px) {
+      font-size: $size-h3-mobil;
+    }
+  }
+}
+
+// Collapse & Open ? :
+.collapse {
+  @include collapse;
+
+  // Si Open en plus de la classe collapse :
+  &.open {
+    i {
+      transform: rotate(180deg);
+    }
+
+    .content {
+      z-index: 1;
+      width: 100%;
+      border: none;
+      position: absolute;
+      top: calc(52px - 10px);
+      border-radius: 5px 5px 10px 10px;
+      display: flex;
+      align-items: center;
+      background: $gray;
+      @media (max-width: 650px) {
+        top: calc(30px - 10px);
+      }
+      p {
+        color: $primary;
+        margin: 2rem;
+        font-size: $size-elem;
+        font-weight: 400;
+        line-height: 25px;
+        @media (max-width: 650px) {
+          font-size: $size-content-collapse;
+          line-height: 18px;
+        }
+      }
+      ul {
+        margin: 2rem;
+      }
+      li {
+        color: $primary;
+        font-size: $size-elem;
+        font-weight: 400;
+        line-height: 25px;
+        @media (max-width: 650px) {
+          font-size: $size-content-collapse;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+}
+
+// Slider :
+.slider {
+  @include slider;
+}
+
+// Class Active NavLink :
+.active {
+  text-decoration: underline;
+}

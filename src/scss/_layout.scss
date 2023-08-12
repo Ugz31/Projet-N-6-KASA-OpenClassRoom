@@ -1,0 +1,305 @@
+// CONTAINER :
+
+.container {
+  max-width: 144rem;
+  height: auto;
+  padding: 5rem 10rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  gap: 5rem;
+  @media (max-width: 650px) {
+    width: 37.5rem;
+    padding: 2rem;
+    gap: 2rem;
+  }
+}
+
+.container-notfoundpage {
+  max-width: 144rem;
+  height: calc(100vh - 21rem);
+  padding: 5rem 10rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  gap: 5rem;
+  @media (max-width: 650px) {
+    width: 37.5rem;
+    padding: 2rem;
+    gap: 2rem;
+  }
+}
+
+.container404 {
+  display: flex;
+  height: 100%;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+  .error {
+    font-size: 200px;
+    font-weight: bold;
+    color: $primary;
+  }
+  .mess {
+    color: $primary;
+    font-size: 30px;
+  }
+  a {
+    font-size: 18px;
+    color: $primary;
+    text-decoration: underline;
+  }
+}
+
+// I. HEADER :
+header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  div {
+    @include logo-header;
+    @media (max-width: 650px) {
+      @include logo-header-mobil;
+    }
+  }
+  nav {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 3rem;
+    @media (max-width: 650px) {
+      gap: 1.5rem;
+    }
+    a {
+      font-size: $size;
+      cursor: pointer;
+      color: $primary;
+      @media (max-width: 650px) {
+        font-size: $size-mobil;
+      }
+    }
+  }
+}
+
+// II. MAIN :
+
+.main-home {
+  width: 100%;
+  min-height: 830px;
+  background-color: $gray;
+  border-radius: 20px;
+  padding: 4.5rem;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); /* Adapte le nombre de column par rapport a la taille de main */
+  gap: 4rem;
+
+  @media (max-width: 650px) {
+    width: 335px;
+    padding: 0;
+    background-color: $white;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2rem;
+    // Cache le 4ème et les autres élements
+  }
+  article {
+    position: relative;
+    width: 100%;
+    height: 340px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    @media (max-width: 650px) {
+      height: 250px;
+    }
+    a {
+      width: 100%;
+      height: 100%;
+      display: block;
+      &::after {
+        content: "";
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.75) 200%);
+      }
+      img {
+        border-radius: 10px;
+        min-height: 100%;
+        min-width: 100%;
+      }
+      h4 {
+        z-index: 2;
+        position: absolute;
+        width: auto;
+        bottom: 20px;
+        left: 20px;
+        color: white;
+        font-size: $size-elem;
+      }
+    }
+  }
+}
+
+.main-product {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  height: auto;
+  gap: 2.5rem;
+  @media (max-width: 650px) {
+    gap: 1rem;
+  }
+  // SLIDER a ajouter sur le composant main-product
+  .info-elem {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    gap: 3rem;
+    @media (max-width: 650px) {
+      flex-flow: column nowrap;
+      gap: 2rem;
+    }
+    .info-rent {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: flex-start;
+      gap: 1.5rem;
+      @media (max-width: 650px) {
+        gap: 0.75rem;
+      }
+      h2 {
+        font-size: $size-h2;
+        color: $primary;
+        @media (max-width: 650px) {
+          font-size: $size-h2-mobil;
+        }
+      }
+      p {
+        color: $primary;
+        font-size: $size-elem;
+        @media (max-width: 650px) {
+          font-size: $size-p-mobile;
+        }
+      }
+      .container-tag {
+        margin-top: 1rem;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+
+        gap: 1rem;
+        .tag-name {
+          @include tag-name;
+        }
+      }
+    }
+    .info-notice {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-between;
+      gap: 2rem;
+      @media (max-width: 650px) {
+        flex-flow: row-reverse nowrap;
+        justify-content: space-between;
+        gap: 0;
+      }
+      .info-owner {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 1rem;
+        p {
+          color: $primary;
+          font-size: $size-elem;
+          @media (max-width: 650px) {
+            font-size: $size-mobil;
+          }
+        }
+        img {
+          width: 64px;
+          height: 64px;
+          border: none;
+          border-radius: 40px;
+          @media (max-width: 650px) {
+            width: 32px;
+            height: 32px;
+          }
+        }
+      }
+
+      .rating {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+        gap: 5px;
+        margin-bottom: 10px;
+        i {
+          font-size: 30px;
+          @media (max-width: 650px) {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.main-apropos {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 4rem;
+  width: 100%;
+  @media (max-width: 650px) {
+    gap: 2rem;
+  }
+}
+
+// III. FOOTER :
+footer {
+  background-color: $secondary;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 21rem;
+  gap: 2rem;
+  div {
+    @include logo-footer;
+    @media (max-width: 650px) {
+    }
+  }
+  p {
+    color: $white;
+    font-size: $size;
+    text-align: center;
+    margin: 1.5rem 0 0 0;
+    @media (max-width: 650px) {
+      margin: 0;
+      font-size: $size-mobil;
+      max-width: 13.3rem;
+    }
+  }
+}

@@ -1,0 +1,82 @@
+// Page Home :
+.div-img1 {
+  position: relative;
+  background: $backgroundHome;
+  width: 100%;
+  height: 22.3rem;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 650px) {
+    height: 11.1rem;
+    border-radius: 15px;
+    justify-content: start;
+  }
+  h1 {
+    z-index: 2;
+    margin: 20px;
+    font-size: $size-h1;
+    color: $white;
+    @media (max-width: 650px) {
+      font-size: $size-h1-mobil;
+    }
+  }
+}
+
+.div-img1::after {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+  @media (max-width: 650px) {
+    height: 11.1rem;
+    border-radius: 15px;
+    justify-content: start;
+  }
+}
+
+// Page A Propos :
+.div-img2 {
+  background: $backgroundApropos;
+  width: 100%;
+  height: 22.3rem;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  @media (max-width: 650px) {
+    border-radius: 15px;
+  }
+}
+
+.darken {
+  opacity: 0.7;
+}
+
+// I. Page Product :
+// Collapse :
+.row {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  gap: 4rem;
+  @media (max-width: 650px) {
+    gap: 1rem;
+  }
+}
+
+.primary {
+  color: $primary;
+}
+
+.gray {
+  color: $gray;
+}
