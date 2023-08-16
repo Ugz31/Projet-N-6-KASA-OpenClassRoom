@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "./_header";
-import Footer from "./_footer";
-import Collapse from "./_collapse";
+import Header from "../react_component/_header";
+import Footer from "../react_component/_footer";
+import Collapse from "../react_component/_collapse";
 
 function AboutPage() {
   return (

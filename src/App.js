@@ -1,10 +1,10 @@
 import "./scss/main.scss";
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import HomePage from "./react_component/HomePage";
-import AboutPage from "./react_component/AboutPage";
-import NotFoundPage from "./react_component/NotFoundPage";
-import HousingComponent from "./react_component/HousingComponent";
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import NotFoundPage from "./pages/NotFoundPage";
+import HousingComponent from "./pages/HousingComponent";
 
 import data from "./data.json";
 

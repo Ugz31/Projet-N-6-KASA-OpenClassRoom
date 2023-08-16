@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "./_header";
-import Footer from "./_footer";
-import ListProductComponent from "./_listProductComponent";
+import Header from "../react_component/_header";
+import Footer from "../react_component/_footer";
+import ListProductComponent from "../react_component/_listProductComponent";
 
 function HomePage(props) {
   const { data } = props;

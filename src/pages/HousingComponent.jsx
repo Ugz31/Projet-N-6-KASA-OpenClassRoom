@@ -1,15 +1,15 @@
 import React, { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
-import Slider from "./_slider";
-import Header from "./_header";
-import Footer from "./_footer";
-import Collapse from "./_collapse";
+import Slider from "../react_component/_slider";
+import Header from "../react_component/_header";
+import Footer from "../react_component/_footer";
+import Collapse from "../react_component/_collapse";
 
 function HousingComponent({ data }) {
   // récupère l'id donné par le ReactRouter défini lors de la sélection du logement
   const { id } = useParams();
-  // Nous utilisons la méthode Array.find() pour rechercher le logement correspondant dans les données en utilisant l'ID extrait de l'URL.
+  //  méthode Array.find() pour rechercher le logement correspondant dans les données en utilisant l'ID extrait de l'URL.
   const selectedHousing = data.find((housing) => housing.id === id);
   const navigate = useNavigate();
 

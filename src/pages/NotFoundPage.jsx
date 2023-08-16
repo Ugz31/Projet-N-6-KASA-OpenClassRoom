@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "./_header";
-import Footer from "./_footer";
+import Header from "../react_component/_header";
+import Footer from "../react_component/_footer";
 import { NavLink } from "react-router-dom";
 
 function NotFoundPage() {
